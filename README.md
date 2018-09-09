@@ -15,9 +15,18 @@ Pure JS Cracklib-inspired library for Node.
 ```javascript
 const cracklib = require('cracklibjs')
 const pw = process.argv[2] // or something
-const check = cracklib()
-// const check = cracklib(options)
-check(pw)
+
+// init with options. the wordlist is parsed here, so future calls
+// don't have to do all that work again.
+const check = cracklib() // cracklib(options)
+
+const validate = (pw) => {
+  try {
+    return check(pw)
+  } catch (e) {
+    return e.message // example: 'Password is too short'
+  }
+}
 ```
 
 The parameter `options` is optional.
