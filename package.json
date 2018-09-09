@@ -1,7 +1,7 @@
 {
   "name": "cracklibjs",
   "description": "Pure JS Cracklib-inspired library for Node.",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
