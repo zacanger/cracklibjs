@@ -46,16 +46,12 @@ Node.
 
 ## Todo
 
-* Handle cases where path doesn't even exist
-* Initialize with wordlist so we only read it once
-* Reverse
 * md5
 * Other hashes?
 * Other complexity checks?
 * Make it fast
 * Make it better
 * TS and Flow defs?
-* Make it work in the browser somehow?
 * Test on Darwin
 * Test on Win32?
 
