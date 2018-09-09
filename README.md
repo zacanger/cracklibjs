@@ -46,6 +46,8 @@ Node.
 
 ## Todo
 
+* Fix RangeError on flattening wordlists
+* Trim and lowercase strings
 * md5
 * Other hashes?
 * Other complexity checks?
