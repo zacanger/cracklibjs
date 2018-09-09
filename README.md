@@ -13,8 +13,12 @@ WIP Pure JS Cracklib-like lib for Node.
 ```javascript
 const check = require('cracklibjs')
 const pw = process.argv[2] // or something
-check(pw)
+check(pw, { dictPath: '/path/to/dict/files' })
 ```
+
+The second argument `options` is optional. If passed, `options.dictPath` should
+be a path to your dictionary file directory, like `/usr/share/dict`. It defaults
+to `/usr/share/dict`.
 
 ## Why?
 
