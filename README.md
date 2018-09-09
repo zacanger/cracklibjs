@@ -52,7 +52,6 @@ Node.
 * Make it fast
 * Make it better
 * TS and Flow defs?
-* Test on Darwin
 * Test on Win32?
 
 ## License

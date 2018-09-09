@@ -71,6 +71,7 @@
   "os": [
     "freebsd",
     "linux",
-    "openbsd"
+    "openbsd",
+    "darwin"
   ]
 }
