@@ -28,6 +28,17 @@ The npm package `cracklib` isn't a vanilla JS solution, has external
 dependencies, and may not build on all Linux systems and future versions of
 Node.
 
+## Todo
+
+* Length
+* Reverse
+* Hash
+* Other complexity checks?
+* Make it fast
+* Make it better
+* TS and Flow defs?
+* Make it work in the browser somehow?
+
 ## License
 
 [MIT](./LICENSE.md)
