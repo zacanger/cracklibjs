@@ -17,7 +17,7 @@ const main = () => {
     usage()
     exit(0)
   } else if (args.length === 1) {
-    console.log(check(args[0]))
+    console.log(check()(args[0]))
   } else {
     usage()
     exit(1)

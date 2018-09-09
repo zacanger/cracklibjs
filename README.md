@@ -13,13 +13,14 @@ WIP Pure JS Cracklib-like lib for Node.
 ## Usage
 
 ```javascript
-const check = require('cracklibjs')
+const cracklib = require('cracklibjs')
 const pw = process.argv[2] // or something
+const check = cracklib()
+// const check = cracklib(options)
 check(pw)
-check(pw, options)
 ```
 
-The second parameter `options` is optional.
+The parameter `options` is optional.
 
 ```javascript
 options = {
