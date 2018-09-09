@@ -24,7 +24,7 @@ The parameter `options` is optional.
 
 ```javascript
 options = {
-  dictPath: string = '/usr/share/dict'
+  dict: string = '/usr/share/dict/words'
   minLength: number = 8
 }
 ```
@@ -46,8 +46,6 @@ Node.
 
 ## Todo
 
-* Fix RangeError on flattening wordlists
-* Trim and lowercase strings
 * md5
 * Other hashes?
 * Other complexity checks?
