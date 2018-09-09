@@ -16,6 +16,7 @@
     "build": "echo 'no build yet'",
     "cover": "nyc npm run test:tape",
     "prebuild": "run-s -s test:lint cover",
+    "preversion": "npm run build",
     "start": "node index",
     "test": "run-s -s test:lint test:tape",
     "test:lint": "eslint -c .eslintrc.json lib/",
