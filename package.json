@@ -10,8 +10,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "cli.js"
   ],
+  "bin": "./cli.js",
   "scripts": {
     "build": "echo 'no build yet'",
     "cover": "nyc npm run test:tape",
@@ -34,7 +36,10 @@
     "password",
     "security"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "zeelib": "8.2.1",
+    "zrgs": "1.0.0"
+  },
   "devDependencies": {
     "babel-eslint": "9.0.0",
     "eslint": "5.5.0",
