@@ -1,6 +1,6 @@
 {
   "name": "cracklibjs",
-  "description": "WIP Cracklib-like lib for Node",
+  "description": "WIP Pure JS Cracklib-like lib for Node",
   "version": "0.0.1",
   "author": {
     "name": "Zac Anger",
@@ -20,14 +20,19 @@
   },
   "bugs": "https://github.com/zacanger/cracklibjs/issues",
   "keywords": [
-    "password",
+    "cracklib",
     "libcrack",
-    "security",
-    "cracklib"
+    "password",
+    "security"
   ],
   "dependencies": {},
   "devDependencies": {},
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "os": [
+    "freebsd",
+    "linux",
+    "openbsd"
+  ]
 }
