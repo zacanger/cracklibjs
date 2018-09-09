@@ -1,0 +1,31 @@
+{
+  "name": "cracklibjs",
+  "description": "cracklibjs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Zac Anger",
+    "email": "zac@zacanger.com",
+    "url": "http://zacanger.com"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": ""
+  },
+  "homepage": "https://github.com/zacanger/cracklibjs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/cracklibjs.git"
+  },
+  "bugs": "https://github.com/zacanger/cracklibjs/issues",
+  "keywords": [
+    "",
+    "cracklibjs"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
