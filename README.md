@@ -46,7 +46,7 @@ Node.
 
 ## Todo
 
-* Length
+* Initialize with wordlist so we only read it once
 * Reverse
 * md5
 * Other hashes?
