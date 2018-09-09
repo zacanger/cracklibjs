@@ -61,6 +61,7 @@ None of the `options` work with the CLI yet.
 
 ## Todo
 
+* strict/loose sorta option to disable case-insensitive and reversed checks?
 * md5
 * Other hashes?
 * Other complexity checks?
