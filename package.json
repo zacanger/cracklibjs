@@ -52,7 +52,7 @@
   },
   "nyc": {
     "include": [
-      "src/index.js"
+      "lib/index.js"
     ],
     "sourceMap": true,
     "instrument": true,
