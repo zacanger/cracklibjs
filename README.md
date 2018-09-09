@@ -16,9 +16,16 @@ Pure JS Cracklib-inspired library for Node.
 const cracklib = require('cracklibjs')
 const pw = process.argv[2] // or something
 
-// init with options. the wordlist is parsed here, so future calls
+// Init with options. The wordlist is parsed here, so future calls
 // don't have to do all that work again.
+// `check: (word: string) => PasswordValidationError | string (word)`
 const check = cracklib() // cracklib(options)
+// The `options` param is optional.
+// type Options = {
+//   dict: string = '/usr/share/dict/words'; path to dictionary file
+//   minLength: number = 8; minimum password length
+//   loose: bool = false; `true` will disable case-insensitive and reversed checks
+// }
 
 const validate = (pw) => {
   try {
@@ -26,15 +33,6 @@ const validate = (pw) => {
   } catch (e) {
     return e.message // example: 'Password is too short'
   }
-}
-```
-
-The parameter `options` is optional.
-
-```javascript
-options = {
-  dict: string = '/usr/share/dict/words'
-  minLength: number = 8
 }
 ```
 
@@ -61,7 +59,6 @@ None of the `options` work with the CLI yet.
 
 ## Todo
 
-* strict/loose sorta option to disable case-insensitive and reversed checks?
 * md5
 * Other hashes?
 * Other complexity checks?
