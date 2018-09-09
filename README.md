@@ -15,19 +15,27 @@ WIP Pure JS Cracklib-like lib for Node.
 ```javascript
 const check = require('cracklibjs')
 const pw = process.argv[2] // or something
-check(pw, { dictPath: '/path/to/dict/directory' })
+check(pw)
+check(pw, options)
 ```
 
-The second argument `options` is optional. If passed, `options.dictPath` should
-be a path to your dictionary file directory, like `/usr/share/dict`. It defaults
-to `/usr/share/dict`.
+The second parameter `options` is optional.
+
+```javascript
+options = {
+  dictPath: string = '/usr/share/dict'
+  minLength: number = 8
+}
+```
 
 ### CLI Usage
 
 ```
 npm i -g cracklibjs
-cracklibjs --dict-path /path/to/dict/directory wordtocheck
+cracklibjs wordtocheck
 ```
+
+None of the `options` work with the CLI yet.
 
 ## Why?
 
