@@ -48,12 +48,15 @@ Node.
 
 * Length
 * Reverse
-* Hash
+* md5
+* Other hashes?
 * Other complexity checks?
 * Make it fast
 * Make it better
 * TS and Flow defs?
 * Make it work in the browser somehow?
+* Test on Darwin
+* Test on Win32?
 
 ## License
 
