@@ -46,6 +46,7 @@ Node.
 
 ## Todo
 
+* Handle cases where path doesn't even exist
 * Initialize with wordlist so we only read it once
 * Reverse
 * md5
