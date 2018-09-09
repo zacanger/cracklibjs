@@ -47,11 +47,17 @@ cracklibjs wordtocheck
 
 None of the `options` work with the CLI yet.
 
-## Why?
+## Questions
 
-The npm package `cracklib` isn't a vanilla JS solution, has external
-dependencies, and may not build on all Linux systems and future versions of
-Node.
+* Why?
+  * The npm package `cracklib` isn't a vanilla JS solution, has external
+    dependencies, and may not build on all Unix-like systems and future versions
+    of Node.
+* I have more than one word list, what should I do?
+  * Try [`cat(1)`](https://www.mankier.com/1/cat)
+* This seems slow!
+  * Don't initialize more than once. Initialization _can_ be slow, depending on
+    your word list and your machine. Hopefully the actual check is fast.
 
 ## Todo
 
@@ -62,6 +68,7 @@ Node.
 * Make it better
 * TS and Flow defs?
 * Test on Win32?
+* Make the options work with the CLI
 
 ## License
 
