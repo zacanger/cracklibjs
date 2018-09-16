@@ -59,10 +59,7 @@ None of the `options` work with the CLI yet.
 
 ## Todo
 
-* Other hashes?
 * Other complexity checks?
-  * md5?
-  * other hashes?
 * General improvements
   * Convert to Flow or TS?
   * Make it faster?
