@@ -24,7 +24,7 @@ const check = cracklib() // cracklib(options)
 // type Options = {
 //   dict: string = '/usr/share/dict/words'; path to dictionary file
 //   minLength: number = 8; minimum password length
-//   loose: bool = false; `true` will disable case-insensitive and reversed checks
+//   loose: bool = false; see below for loose vs strict
 // }
 
 const validate = (pw) => {
@@ -35,6 +35,11 @@ const validate = (pw) => {
   }
 }
 ```
+
+The `loose` option, when true, disables:
+* Case-insensitive checks
+* Reversed string checks
+* md5, sha1, sha256, and sha512 checks
 
 ### CLI Usage
 
