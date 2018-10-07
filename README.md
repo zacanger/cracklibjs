@@ -41,15 +41,6 @@ The `loose` option, when true, disables:
 * Reversed string checks
 * md5, sha1, sha256, and sha512 checks
 
-### CLI Usage
-
-```
-npm i -g cracklibjs
-cracklibjs wordtocheck
-```
-
-None of the `options` work with the CLI yet.
-
 ## Questions
 
 * Why?
@@ -70,7 +61,6 @@ None of the `options` work with the CLI yet.
   * Make it faster?
 * TS and Flow defs?
 * Test on Win32?
-* Make the options work with the CLI
 
 ## License
 
