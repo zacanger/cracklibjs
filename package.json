@@ -35,8 +35,7 @@
     "security"
   ],
   "dependencies": {
-    "zeelib": "8.2.2",
-    "zrgs": "1.0.0"
+    "zeelib": "8.2.2"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
