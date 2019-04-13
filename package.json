@@ -35,20 +35,20 @@
     "security"
   ],
   "dependencies": {
-    "zeelib": "8.2.2"
+    "zeelib": "8.6.0"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
-    "eslint": "5.9.0",
-    "eslint-config-zacanger": "3.4.1",
+    "eslint": "5.16.0",
+    "eslint-config-zacanger": "3.4.2",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-node": "8.0.0",
-    "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-unicorn": "6.0.1",
+    "eslint-plugin-import": "2.17.1",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-unicorn": "8.0.2",
     "npm-run-all": "4.1.5",
-    "nyc": "13.1.0",
-    "tape": "4.9.1"
+    "nyc": "13.3.0",
+    "tape": "4.10.1"
   },
   "engines": {
     "node": ">=10.0.0"
