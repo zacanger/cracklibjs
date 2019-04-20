@@ -3,8 +3,8 @@
   "description": "Pure JS Cracklib-inspired library for Node.",
   "version": "1.0.5",
   "author": {
-    "name": "Zac Anger",
     "email": "zac@zacanger.com",
+    "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
   "license": "MIT",
@@ -13,10 +13,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "echo 'no build yet'",
     "cover": "nyc npm run test:tape",
-    "prebuild": "run-s -s test:lint cover",
-    "preversion": "npm run build",
+    "preversion": "run-s -s test:lint cover && sortpack",
     "start": "node index",
     "test": "run-s -s test:lint test:tape",
     "test:lint": "eslint -c .eslintrc.json lib/",
@@ -42,12 +40,13 @@
     "eslint": "5.16.0",
     "eslint-config-zacanger": "3.4.2",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.17.1",
+    "eslint-plugin-import": "2.17.2",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-unicorn": "8.0.2",
     "npm-run-all": "4.1.5",
-    "nyc": "13.3.0",
+    "nyc": "14.0.0",
+    "sortpack": "1.1.4",
     "tape": "4.10.1"
   },
   "engines": {
@@ -57,18 +56,18 @@
     "include": [
       "lib/index.js"
     ],
-    "sourceMap": true,
     "instrument": true,
     "reporter": [
       "text",
       "html",
       "json"
-    ]
+    ],
+    "sourceMap": true
   },
   "os": [
+    "darwin",
     "freebsd",
     "linux",
-    "openbsd",
-    "darwin"
+    "openbsd"
   ]
 }
