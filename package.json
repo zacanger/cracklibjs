@@ -62,5 +62,10 @@
     "freebsd",
     "linux",
     "openbsd"
-  ]
+  ],
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/zacanger"
+  }
+
 }
