@@ -53,10 +53,4 @@ The `loose` option, when true, disables:
   * Don't initialize more than once. Initialization _can_ be slow, depending on
     your word list and your machine. Hopefully the actual check is fast.
 
-## Patreon Sponsors
-
-This project is sponsored on [Patreon](https://www.patreon.com/zacanger) by:
-
-* [Keeley Hammond](https://github.com/VerteDinde)
-
 [LICENSE](./LICENSE.md)
