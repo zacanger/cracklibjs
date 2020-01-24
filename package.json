@@ -64,7 +64,7 @@
     "exclude": [
       "src/*.test.ts"
     ],
-    "extension": [
+    "extensions": [
       "*.ts"
     ],
     "include": [
