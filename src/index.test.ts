@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 const fakePath = resolve(__dirname, 'not-real.txt')
 
-test('foo', (t) => {
+test('cracklibjs', (t) => {
   const okWord = 'alksdfjlkj1232345sdlkjcs8!!'
   t.equals(crack()(okWord), okWord, 'random word is ok, no options')
   t.equals(crack({})(okWord), okWord, 'random word is ok, empty options')
