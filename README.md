@@ -13,7 +13,9 @@ Pure JS Cracklib-inspired library for Node.
 ## Usage
 
 ```javascript
-const cracklib = require('cracklibjs')
+import cracklib from 'cracklibjs'
+// if you're using `require`, you'll need to `require('cracklibjs').default`
+
 const pw = process.argv[2] // or something
 
 // Init with options. The wordlist is parsed here, so future calls

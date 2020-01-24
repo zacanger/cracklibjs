@@ -1,9 +1,9 @@
-const { getWords, includes, PasswordValidationError } = require('./util')
+import { getWords, includes, PasswordValidationError } from './util'
 
 const cracklib = ({
   dict = '/usr/share/dict/words',
   minLength = 8,
-  loose = false
+  loose = false,
 } = {}) => {
   const words = getWords(dict, loose)
   return (word = '') => {
@@ -20,4 +20,4 @@ const cracklib = ({
   }
 }
 
-module.exports = cracklib
+export default cracklib

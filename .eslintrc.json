@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "plugins": [
+    "zacanger"
+  ],
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:zacanger/recommended",
+    "plugin:zacanger/typescript",
+    "plugin:zacanger/node",
+    "plugin:zacanger/prettier-ts"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "fp/no-unused-expression": 0,
+    "fp/no-nil": 0,
+    "fp/no-let": 0,
+    "fp/no-loops": 0,
+    "fp/no-mutation": 0,
+    "fp/no-mutating-methods": 0,
+    "fp/no-class": 0,
+    "fp/no-this": 0,
+    "@typescript-eslint/require-array-sort-compare": 0,
+    "node/no-missing-import": 0
+  }
+}
