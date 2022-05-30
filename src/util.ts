@@ -3,10 +3,10 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import isFile from 'zeelib/lib/is-file'
 
-const uniq = <T>(a: Array<T>): Array<T> => [...new Set(a)]
+const uniq = <T>(a: T[]): T[] => [...new Set(a)]
 
 export class PasswordValidationError extends Error {
-  constructor(message: string) {
+  constructor (message: string) {
     super(message)
     this.name = 'PasswordValidationError'
   }
@@ -22,47 +22,51 @@ const sha1String = hashString('sha1')
 const sha256String = hashString('sha256')
 const sha512String = hashString('sha512')
 
-const hashWord = (s: string = ''): Array<string> => [
+const hashWord = (s: string = ''): string[] => [
   md5String(s),
   sha1String(s),
   sha256String(s),
-  sha512String(s),
+  sha512String(s)
 ]
 
-const buildWordList = (dict: string): Array<string> =>
+const buildWordList = (dict: string): string[] =>
   readFileSync(dict, 'utf8')
     .split('\n')
     .filter((a) => a)
 
 const reverseString = (s: string = ''): string => s.split('').reverse().join('')
 
-const buildDefaultWordList = (): Array<string> =>
+const buildDefaultWordList = (): string[] =>
   buildWordList(resolve(__dirname, 'cracklib-small.txt'))
 
 const trim = (s: string = ''): string => s.trim()
 
 const normalize = (s: string = ''): string => trim(s.toLowerCase())
 
-export const getWords = (dict: string, loose?: boolean): Array<string> => {
+export const getWords = (dict: string, loose?: boolean): string[] => {
   const words = isFile(dict) ? buildWordList(dict) : buildDefaultWordList()
-  const forward = (words.length ? words : buildDefaultWordList()).map(
+  const forward = ((words.length > 0) ? words : buildDefaultWordList()).map(
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     loose ? trim : normalize
   )
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (loose) {
     return uniq(forward).sort()
   }
   const hashedWords = forward.map(hashWord)
 
-  // @ts-ignore this is correct actually
+  /* eslint-disable @typescript-eslint/require-array-sort-compare */
+  // @ts-expect-error this is correct actually
   return uniq([
     ...forward,
     ...forward.map(reverseString),
-    ...hashedWords,
+    ...hashedWords
   ]).sort()
+  /* eslint-enable @typescript-eslint/require-array-sort-compare */
 }
 
 // like a binary search
-export const includes = (el: string, xs: Array<string>): boolean => {
+export const includes = (el: string, xs: string[]): boolean => {
   // i have no idea how efficient native includes actually is.
   // probably a linear search though?
   if (xs.length < 500) {

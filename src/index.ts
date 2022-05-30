@@ -1,12 +1,14 @@
 import { getWords, includes, PasswordValidationError } from './util'
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const cracklib = ({
   dict = '/usr/share/dict/words',
   minLength = 8,
-  loose = false,
+  loose = false
 } = {}) => {
   const words = getWords(dict, loose)
   return (word = '') => {
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     if (!word.length || /^\s+$/.test(word)) {
       throw new PasswordValidationError('Password is empty or all whitespace')
     }
