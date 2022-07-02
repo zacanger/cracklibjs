@@ -40,9 +40,9 @@ test('cracklibjs', (t) => {
     'crack with "eno" (reversed "one") fails'
   )
   t.throws(
-    () => crack()('abandona#ble'),
+    () => crack()('abandon#ment'),
     /Password is too similar to a dictionary word/,
-    'crack with "abandona#ble" fails'
+    'crack with "abandon#ment" fails'
   )
   t.equals(
     crack({ minLength: 2, loose: true })('eno'),
