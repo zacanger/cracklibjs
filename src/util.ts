@@ -93,3 +93,8 @@ export const includes = (el: string, xs: string[]): boolean => {
 
   return false
 }
+
+export const isBasedOn = (el: string, xs: string[]): boolean => {
+  const replaced = el.toLowerCase().replace(/[\p{P}$+<=>^`|~]/gu, '')
+  return includes(replaced, xs)
+}

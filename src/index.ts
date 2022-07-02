@@ -1,4 +1,9 @@
-import { getWords, includes, PasswordValidationError } from './util'
+import {
+  PasswordValidationError,
+  getWords,
+  includes,
+  isBasedOn
+} from './util'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const cracklib = ({
@@ -17,6 +22,9 @@ const cracklib = ({
     }
     if (includes(word, words)) {
       throw new PasswordValidationError('Password is too common')
+    }
+    if (isBasedOn(word, words)) {
+      throw new PasswordValidationError('Password is too similar to a dictionary word')
     }
     return word
   }
