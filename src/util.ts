@@ -1,7 +1,14 @@
 import { createHash } from 'crypto'
-import { readFileSync } from 'fs'
+import { readFileSync, statSync } from 'fs'
 import { resolve } from 'path'
-import isFile from 'zeelib/lib/is-file'
+
+const isFile = (filePath: string): boolean => {
+  try {
+    return statSync(filePath).isFile()
+  } catch {
+    return false
+  }
+}
 
 const uniq = <T>(a: T[]): T[] => [...new Set(a)]
 

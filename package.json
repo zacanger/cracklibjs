@@ -42,7 +42,6 @@
     "security"
   ],
   "dependencies": {
-    "zeelib": "11.2.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
