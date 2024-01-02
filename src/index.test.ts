@@ -12,42 +12,42 @@ test('cracklibjs', (t) => {
   t.throws(
     () => crack({ minLength: 9 })('asdf11!!'),
     /Password is too short/,
-    'crack with minLength fails'
+    'crack with minLength fails',
   )
   t.throws(
     () => crack()(''),
     /Password is empty or all whitespace/,
-    'empty password fails'
+    'empty password fails',
   )
   t.throws(
     () => crack()(),
     /Password is empty or all whitespace/,
-    'no password fails'
+    'no password fails',
   )
   t.throws(
     () => crack()('\t   \n'),
     /Password is empty or all whitespace/,
-    'whitespace password fails'
+    'whitespace password fails',
   )
   t.throws(
     () => crack({ minLength: 2 })('one'),
     /Password is too common/,
-    'crack with "one" fails'
+    'crack with "one" fails',
   )
   t.throws(
     () => crack({ minLength: 2 })('eno'),
     /Password is too common/,
-    'crack with "eno" (reversed "one") fails'
+    'crack with "eno" (reversed "one") fails',
   )
   t.throws(
     () => crack()('abandon#ment'),
     /Password is too similar to a dictionary word/,
-    'crack with "abandon#ment" fails'
+    'crack with "abandon#ment" fails',
   )
   t.equals(
     crack({ minLength: 2, loose: true })('eno'),
     'eno',
-    'crack with "eno" is okay with loose option'
+    'crack with "eno" is okay with loose option',
   )
   t.equals(crack({ dict: fakePath })(okWord), okWord, 'works with broken path')
   t.end()

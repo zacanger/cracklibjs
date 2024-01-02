@@ -10,7 +10,7 @@ const isFile = (filePath: string): boolean => {
   }
 }
 
-const uniq = <T>(a: T[]): T[] => [...new Set(a)]
+const uniq = <T>(a: T[]): T[] => [ ...new Set(a) ]
 
 export class PasswordValidationError extends Error {
   constructor (message: string) {
@@ -33,7 +33,7 @@ const hashWord = (s: string = ''): string[] => [
   md5String(s),
   sha1String(s),
   sha256String(s),
-  sha512String(s)
+  sha512String(s),
 ]
 
 const buildWordList = (dict: string): string[] =>
@@ -54,7 +54,7 @@ export const getWords = (dict: string, loose?: boolean): string[] => {
   const words = isFile(dict) ? buildWordList(dict) : buildDefaultWordList()
   const forward = ((words.length > 0) ? words : buildDefaultWordList()).map(
     // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-    loose ? trim : normalize
+    loose ? trim : normalize,
   )
   // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (loose) {
@@ -67,7 +67,7 @@ export const getWords = (dict: string, loose?: boolean): string[] => {
   return uniq([
     ...forward,
     ...forward.map(reverseString),
-    ...hashedWords
+    ...hashedWords,
   ]).sort()
   /* eslint-enable @typescript-eslint/require-array-sort-compare */
 }
